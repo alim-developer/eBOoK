@@ -1,0 +1,173 @@
+#profil{
+	.container_fluid{
+		.container{
+			padding: 50px 0;
+			.bar{
+				padding: 25px 0;
+				ul{
+					li{
+						padding: 15px 10px;
+						display: block;
+						cursor: pointer;
+						font-size: 16px;
+						&:hover{
+							background-color: lighten(lightgray, 13%);
+							border-right: 3px solid $mainColor;
+							z-index: 15;
+							color: $mainColor;
+						}
+						a{
+							color: black;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			.result{
+				padding: 25px 0;
+				background-color: lighten(lightgray, 14%);
+				ul{
+					display: none;
+					width: 202px;
+					margin: 0 auto;
+					text-align: center;
+					margin-bottom: 25px;
+					li{
+						padding: 13px 10px;
+						display: block;
+						cursor: pointer;
+						font-size: 16px;
+						border: 1px solid transparent;
+						&:hover{
+							border: 1px solid black;
+							z-index: 15;
+							color: $mainColor;
+						}
+						a{
+							color: black;
+							text-decoration: none;
+						}
+					}
+				}
+				.usersEdit{
+					width: 202px;
+					margin: 0 auto;
+					label{
+						display: block;
+						font-size: 16px;
+					}
+					input{
+						width: 200px;
+						margin-bottom: 20px;
+						padding: 5px 0;
+						border: 1px solid black;
+						text-indent: 15px;
+						@include border-radius(5px);
+						background-color: white;
+					}
+					input:focus[type="text"],input:focus[type="password"]{
+						border: 1px solid $mainColor;
+					}
+					input[type="submit"]{
+						width: auto;
+						text-indent: 0;
+						padding-left: 15px;
+						padding-right: 15px;
+						float: right;
+						@include border-radius(5px);
+						&:hover{
+							background-color: black;
+							color: white;
+						}
+					}
+				}
+				.addBook{
+					display: none;
+					width: 502px;
+					margin: 0 auto;
+					label{
+						display: block;
+						font-size: 16px;
+					}
+					input{
+						width: 200px;
+						margin-bottom: 20px;
+						padding: 5px 0;
+						border: 1px solid black;
+						text-indent: 15px;
+						@include border-radius(5px);
+						background-color: white;
+					}
+					input[type="file"]{
+						font-size: 13px;
+					}
+					textarea:focus,input:focus[type="text"],input:focus[type="password"]{
+						border: 1px solid $mainColor;
+					}
+					textarea{
+						width: 500px;
+						height: 200px;
+						border: 1px solid black;
+						background-color: white;
+						padding: 10px;
+					}
+					input[type="submit"]{
+						width: auto;
+						display: block;
+						text-indent: 0;
+						margin: 20px 0;
+						padding-left: 15px;
+						padding-right: 15px;
+						// float: right;
+						@include border-radius(5px);
+						&:hover{
+							background-color: black;
+							color: white;
+						}
+					}
+					select{
+						width: 100%;
+						margin-bottom: 15px;
+						border: 1px solid black;
+						background-color: white;
+						padding: 3px 10px;
+						@include border-radius(5px);
+					}
+					.cent{
+						margin: 0 auto;
+						width: 202px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 480px) and (max-width: 760px){
+		.container_fluid{
+			.container{
+				.result{
+					ul{
+						display: inherit;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width:550px){
+		.container_fluid{
+			.container{
+				.result{
+					ul{
+						display: inherit;
+					}
+					.addBook{
+						width: 202px;
+						textarea{
+							width: 200px;
+							height: 300px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

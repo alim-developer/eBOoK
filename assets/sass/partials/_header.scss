@@ -1,0 +1,411 @@
+#header{
+	.container-fluid{
+		@include shadow(0px 0px 11px lightgray);
+		.container{
+			border-bottom: 1px solid $mainColor;
+			.help{
+				float:right;
+				ul{
+					li{
+						float:left;
+						margin-right: 20px;
+						a{
+							display: inline-block;
+							padding: 7px 0 7px 15px;
+							text-decoration: none;
+							color: black;
+							&:hover{
+								color: $mainColor;
+							}
+						}
+					}
+				}
+			}
+			.head{
+				.logo{
+					float: left;
+					a{
+						img{
+							width: 120px;
+							display: inline;
+							margin: 19px 20px;
+						}
+					}
+					ul{
+						float: right;
+						display: none;
+						li{
+							padding: 21px 0;
+							a{
+								
+								margin-left: -5px;
+								font-size: 20px;
+								text-decoration: none;
+								color: black;
+							}
+						}
+					}
+					form{
+						display: inline;
+						input[type="text"]{
+							width: 400px;
+							padding: 12px;
+							background-color: white;
+							border: 1px solid black;
+							@include border-radius(2px);
+						}
+						input[type="submit"]{
+							width: 45px;
+							padding: 12px;
+							background-color: white;
+							border: 1px solid black;
+							@include border-radius(2px);
+							&:hover{
+								color: $mainColor;
+							}
+						}
+					}
+				}
+				.signin{
+					float: right;
+					padding: 25px 10px;
+					button{
+						width: 95px;
+						margin-right: 11px;
+						padding: 12px;
+						background-color: white;
+						border: 1px solid black;
+						@include border-radius(2px);
+						&:hover{
+							color: $mainColor;
+						}
+					}
+				}
+				.mobileVersion, .mobileVersion2{
+					float: right;
+					display: none;
+				}
+				.profil{
+					float: right;
+					padding: 25px 0px;
+					position: relative;
+					button{
+						width: 120px;
+						padding: 12px;
+						background-color: white;
+						border: none;
+						font-size: 20px;
+						@include border-radius(2px);
+						&:hover{
+							color: $mainColor;
+						}
+					}
+					ul{
+						display: none;
+						width: 140px;
+						position: absolute;
+						right: 0;
+						background-color: white;
+						border: none;
+						padding: 7px 10px;
+						@include shadow(1px 1px 11px lightgray);
+						li{
+							a{
+								color: black;
+								display: block;
+								padding: 8px 0;
+								text-decoration: none;
+								&:hover{
+									color: $mainColor;
+								}
+							}
+						}
+					}
+				}
+			}
+			.menu{
+				ul{
+					li{
+						float: left;
+						padding: 7px 0 12px 20px;
+						cursor: pointer;
+						font-size: 20px;
+						position: relative;
+						@include transition(all 0.2s ease);
+						&:hover{
+							ul{
+								display: block;
+							}
+						}
+						ul{
+							@include shadow(1px 1px 11px lightgray);
+							background-color: white;
+							width: 400px;
+							cursor: default;
+							padding: 10px 4px;
+							position: absolute;
+							top: 43px;
+							display: none;
+							z-index: 100;
+							h4{
+								font-size: 16px;
+								color: $mainColor;
+								padding: 10px 8px;
+							}
+							li{
+								vertical-align: middle;
+								font-size: 15px;
+								padding: 0;
+								margin: 8px;
+								a{
+									border: 1px solid black;
+									padding: 8px 13px;
+									display: inline-block;
+									color: black;
+									text-decoration: none;
+									background-color: white;
+									@include border-radius(12px);
+									@include transition(all 0.2s ease);
+									&:hover{
+										background-color: black;
+										color: white;
+									}
+								}
+							}
+							ol{
+								li{
+									a{
+										text-decoration: none;
+										color: white;
+										background-color: black;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 760px) and (max-width:992px){
+		.container-fluid{
+			.container{
+				.head{
+					.logo{
+						a{
+							img{
+								width: 70px;
+							}
+						}
+						form{
+							input[type="text"]{
+								width: 230px;
+								padding: 8px;
+								font-size: 13px;
+							}
+							input[type="submit"]{
+								width: 35px;
+								padding: 7px;
+							}
+						}
+					}
+					.signin{
+						padding: 17px 0px;
+						button{
+							width: 95px;
+							margin-right: 11px;
+							padding: 8px;
+							background-color: white;
+							border: 1px solid black;
+							font-size: 13px;
+							@include border-radius(2px);
+							&:hover{
+								color: $mainColor;
+							}
+						}
+					}
+					.profil{
+						padding: 7px 0px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width:760px){
+		.container-fluid{
+			padding: 0;
+			.container{
+				.help{
+					display: none;
+				}
+				.head{
+					padding-top: 23px;
+					.logo{
+						a{
+							img{
+								width: 70px;
+							}
+						}
+						ul{
+							display: inherit;
+						}
+						form{
+							display: none;
+							input[type="text"]{
+								width: 230px;
+								padding: 8px;
+								font-size: 13px;
+								color: red;
+							}
+							input[type="submit"]{
+								width: 35px;
+								padding: 7px;
+							}
+						}
+					}
+					.signin{
+						padding: 17px 0px;
+						button{
+							display: none;
+						}
+					}
+					.mobileVersion{
+						display: inherit;
+						position: relative;
+						i{
+							cursor: pointer;
+							padding: 15px 0;
+						}
+						.mobile{
+							display: none;
+							width: 210px;
+							@include shadow(1px 1px 11px lightgray);
+							padding: 7px 11px;
+							background-color: white;
+							position: absolute;
+							right: 0;
+							z-index: 50;
+							form{
+								input[type="text"]{
+									width: calc(100% - 45px);
+									padding: 8px;
+									background-color: white;
+									border: 1px solid black;
+									@include border-radius(2px);
+									margin: 5px 0;
+								}
+								input[type="submit"]{
+									width: 40px;
+									padding: 8px;
+									background-color: white;
+									border: 1px solid black;
+									@include border-radius(2px);
+									&:hover{
+										color: $mainColor;
+									}
+								}
+								button{
+									width: 100%;
+									margin-right: 11px;
+									padding: 12px;
+									background-color: white;
+									border: 1px solid black;
+									@include border-radius(2px);
+									&:hover{
+										color: $mainColor;
+									}
+									&:last-child{
+										margin: 5px 0;
+									}
+								}
+							}
+						}
+					}
+					.mobileVersion2{
+						display: inherit;
+						position: relative;
+						i{
+							cursor: pointer;
+							padding: 15px 0;
+						}
+						.mobile{
+							display: none;
+							width: 210px;
+							@include shadow(1px 1px 11px lightgray);
+							padding: 7px 11px;
+							background-color: white;
+							position: absolute;
+							right: 0;
+							z-index: 50;
+							form{
+								input[type="text"]{
+									width: calc(100% - 45px);
+									padding: 8px;
+									background-color: white;
+									border: 1px solid black;
+									@include border-radius(2px);
+									margin: 5px 0;
+								}
+								input[type="submit"]{
+									width: 40px;
+									padding: 8px;
+									background-color: white;
+									border: 1px solid black;
+									@include border-radius(2px);
+									&:hover{
+										color: $mainColor;
+									}
+								}
+							}
+							ul{
+								li{
+									a{
+										display: block;
+										font-size: 15px;
+										color: black;
+										padding: 5px 0;
+										text-decoration: none;
+										&:hover{
+											background-color: lighten(lightgray, 15%);
+											color: $mainColor;
+										}
+									}
+								}
+							}
+							ol{
+								li{
+									font-size: 18px;
+									color: black;
+									padding: 5px 0;
+									text-align: center;
+									cursor: pointer;
+								}
+							}
+						}
+					}
+					.profil{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 480px){
+		.container-fluid{
+			.container{
+				.menu{
+					ul{
+						li{
+							ul{
+								width: 200px;
+								li{
+									margin: 4px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

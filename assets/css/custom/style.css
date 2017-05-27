@@ -1,0 +1,922 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font: 14px 'Lato', Tahoma, Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 15px;
+  overflow-x: hidden; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, li {
+  list-style: none;
+  padding: 0; }
+
+.clearFix {
+  clear: both; }
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  src: url(../../fonts/Lato-Light.ttf) format("truetype");
+  font-weight: 300; }
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  src: url(../../fonts/Lato-Regular.ttf) format("truetype");
+  font-weight: 400; }
+#header .container-fluid {
+  -moz-box-shadow: 0px 0px 11px lightgray;
+  -webkit-box-shadow: 0px 0px 11px lightgray;
+  box-shadow: 0px 0px 11px lightgray; }
+  #header .container-fluid .container {
+    border-bottom: 1px solid #BF0000; }
+    #header .container-fluid .container .help {
+      float: right; }
+      #header .container-fluid .container .help ul li {
+        float: left;
+        margin-right: 20px; }
+        #header .container-fluid .container .help ul li a {
+          display: inline-block;
+          padding: 7px 0 7px 15px;
+          text-decoration: none;
+          color: black; }
+          #header .container-fluid .container .help ul li a:hover {
+            color: #BF0000; }
+    #header .container-fluid .container .head .logo {
+      float: left; }
+      #header .container-fluid .container .head .logo a img {
+        width: 120px;
+        display: inline;
+        margin: 19px 20px; }
+      #header .container-fluid .container .head .logo ul {
+        float: right;
+        display: none; }
+        #header .container-fluid .container .head .logo ul li {
+          padding: 21px 0; }
+          #header .container-fluid .container .head .logo ul li a {
+            margin-left: -5px;
+            font-size: 20px;
+            text-decoration: none;
+            color: black; }
+      #header .container-fluid .container .head .logo form {
+        display: inline; }
+        #header .container-fluid .container .head .logo form input[type="text"] {
+          width: 400px;
+          padding: 12px;
+          background-color: white;
+          border: 1px solid black;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px; }
+        #header .container-fluid .container .head .logo form input[type="submit"] {
+          width: 45px;
+          padding: 12px;
+          background-color: white;
+          border: 1px solid black;
+          -webkit-border-radius: 2px;
+          -moz-border-radius: 2px;
+          border-radius: 2px; }
+          #header .container-fluid .container .head .logo form input[type="submit"]:hover {
+            color: #BF0000; }
+    #header .container-fluid .container .head .signin {
+      float: right;
+      padding: 25px 10px; }
+      #header .container-fluid .container .head .signin button {
+        width: 95px;
+        margin-right: 11px;
+        padding: 12px;
+        background-color: white;
+        border: 1px solid black;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px; }
+        #header .container-fluid .container .head .signin button:hover {
+          color: #BF0000; }
+    #header .container-fluid .container .head .mobileVersion, #header .container-fluid .container .head .mobileVersion2 {
+      float: right;
+      display: none; }
+    #header .container-fluid .container .head .profil {
+      float: right;
+      padding: 25px 0px;
+      position: relative; }
+      #header .container-fluid .container .head .profil button {
+        width: 120px;
+        padding: 12px;
+        background-color: white;
+        border: none;
+        font-size: 20px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px; }
+        #header .container-fluid .container .head .profil button:hover {
+          color: #BF0000; }
+      #header .container-fluid .container .head .profil ul {
+        display: none;
+        width: 140px;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        border: none;
+        padding: 7px 10px;
+        -moz-box-shadow: 1px 1px 11px lightgray;
+        -webkit-box-shadow: 1px 1px 11px lightgray;
+        box-shadow: 1px 1px 11px lightgray; }
+        #header .container-fluid .container .head .profil ul li a {
+          color: black;
+          display: block;
+          padding: 8px 0;
+          text-decoration: none; }
+          #header .container-fluid .container .head .profil ul li a:hover {
+            color: #BF0000; }
+    #header .container-fluid .container .menu ul li {
+      float: left;
+      padding: 7px 0 12px 20px;
+      cursor: pointer;
+      font-size: 20px;
+      position: relative;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+      #header .container-fluid .container .menu ul li:hover ul {
+        display: block; }
+      #header .container-fluid .container .menu ul li ul {
+        -moz-box-shadow: 1px 1px 11px lightgray;
+        -webkit-box-shadow: 1px 1px 11px lightgray;
+        box-shadow: 1px 1px 11px lightgray;
+        background-color: white;
+        width: 400px;
+        cursor: default;
+        padding: 10px 4px;
+        position: absolute;
+        top: 43px;
+        display: none;
+        z-index: 100; }
+        #header .container-fluid .container .menu ul li ul h4 {
+          font-size: 16px;
+          color: #BF0000;
+          padding: 10px 8px; }
+        #header .container-fluid .container .menu ul li ul li {
+          vertical-align: middle;
+          font-size: 15px;
+          padding: 0;
+          margin: 8px; }
+          #header .container-fluid .container .menu ul li ul li a {
+            border: 1px solid black;
+            padding: 8px 13px;
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            background-color: white;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease; }
+            #header .container-fluid .container .menu ul li ul li a:hover {
+              background-color: black;
+              color: white; }
+        #header .container-fluid .container .menu ul li ul ol li a {
+          text-decoration: none;
+          color: white;
+          background-color: black; }
+@media screen and (min-width: 760px) and (max-width: 992px) {
+  #header .container-fluid .container .head .logo a img {
+    width: 70px; }
+  #header .container-fluid .container .head .logo form input[type="text"] {
+    width: 230px;
+    padding: 8px;
+    font-size: 13px; }
+  #header .container-fluid .container .head .logo form input[type="submit"] {
+    width: 35px;
+    padding: 7px; }
+  #header .container-fluid .container .head .signin {
+    padding: 17px 0px; }
+    #header .container-fluid .container .head .signin button {
+      width: 95px;
+      margin-right: 11px;
+      padding: 8px;
+      background-color: white;
+      border: 1px solid black;
+      font-size: 13px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px; }
+      #header .container-fluid .container .head .signin button:hover {
+        color: #BF0000; }
+  #header .container-fluid .container .head .profil {
+    padding: 7px 0px; } }
+@media screen and (max-width: 760px) {
+  #header .container-fluid {
+    padding: 0; }
+    #header .container-fluid .container .help {
+      display: none; }
+    #header .container-fluid .container .head {
+      padding-top: 23px; }
+      #header .container-fluid .container .head .logo a img {
+        width: 70px; }
+      #header .container-fluid .container .head .logo ul {
+        display: inherit; }
+      #header .container-fluid .container .head .logo form {
+        display: none; }
+        #header .container-fluid .container .head .logo form input[type="text"] {
+          width: 230px;
+          padding: 8px;
+          font-size: 13px;
+          color: red; }
+        #header .container-fluid .container .head .logo form input[type="submit"] {
+          width: 35px;
+          padding: 7px; }
+      #header .container-fluid .container .head .signin {
+        padding: 17px 0px; }
+        #header .container-fluid .container .head .signin button {
+          display: none; }
+      #header .container-fluid .container .head .mobileVersion {
+        display: inherit;
+        position: relative; }
+        #header .container-fluid .container .head .mobileVersion i {
+          cursor: pointer;
+          padding: 15px 0; }
+        #header .container-fluid .container .head .mobileVersion .mobile {
+          display: none;
+          width: 210px;
+          -moz-box-shadow: 1px 1px 11px lightgray;
+          -webkit-box-shadow: 1px 1px 11px lightgray;
+          box-shadow: 1px 1px 11px lightgray;
+          padding: 7px 11px;
+          background-color: white;
+          position: absolute;
+          right: 0;
+          z-index: 50; }
+          #header .container-fluid .container .head .mobileVersion .mobile form input[type="text"] {
+            width: calc(100% - 45px);
+            padding: 8px;
+            background-color: white;
+            border: 1px solid black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            margin: 5px 0; }
+          #header .container-fluid .container .head .mobileVersion .mobile form input[type="submit"] {
+            width: 40px;
+            padding: 8px;
+            background-color: white;
+            border: 1px solid black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px; }
+            #header .container-fluid .container .head .mobileVersion .mobile form input[type="submit"]:hover {
+              color: #BF0000; }
+          #header .container-fluid .container .head .mobileVersion .mobile form button {
+            width: 100%;
+            margin-right: 11px;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px; }
+            #header .container-fluid .container .head .mobileVersion .mobile form button:hover {
+              color: #BF0000; }
+            #header .container-fluid .container .head .mobileVersion .mobile form button:last-child {
+              margin: 5px 0; }
+      #header .container-fluid .container .head .mobileVersion2 {
+        display: inherit;
+        position: relative; }
+        #header .container-fluid .container .head .mobileVersion2 i {
+          cursor: pointer;
+          padding: 15px 0; }
+        #header .container-fluid .container .head .mobileVersion2 .mobile {
+          display: none;
+          width: 210px;
+          -moz-box-shadow: 1px 1px 11px lightgray;
+          -webkit-box-shadow: 1px 1px 11px lightgray;
+          box-shadow: 1px 1px 11px lightgray;
+          padding: 7px 11px;
+          background-color: white;
+          position: absolute;
+          right: 0;
+          z-index: 50; }
+          #header .container-fluid .container .head .mobileVersion2 .mobile form input[type="text"] {
+            width: calc(100% - 45px);
+            padding: 8px;
+            background-color: white;
+            border: 1px solid black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            margin: 5px 0; }
+          #header .container-fluid .container .head .mobileVersion2 .mobile form input[type="submit"] {
+            width: 40px;
+            padding: 8px;
+            background-color: white;
+            border: 1px solid black;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px; }
+            #header .container-fluid .container .head .mobileVersion2 .mobile form input[type="submit"]:hover {
+              color: #BF0000; }
+          #header .container-fluid .container .head .mobileVersion2 .mobile ul li a {
+            display: block;
+            font-size: 15px;
+            color: black;
+            padding: 5px 0;
+            text-decoration: none; }
+            #header .container-fluid .container .head .mobileVersion2 .mobile ul li a:hover {
+              background-color: #f9f9f9;
+              color: #BF0000; }
+          #header .container-fluid .container .head .mobileVersion2 .mobile ol li {
+            font-size: 18px;
+            color: black;
+            padding: 5px 0;
+            text-align: center;
+            cursor: pointer; }
+      #header .container-fluid .container .head .profil {
+        display: none; } }
+@media screen and (max-width: 480px) {
+  #header .container-fluid .container .menu ul li ul {
+    width: 200px; }
+    #header .container-fluid .container .menu ul li ul li {
+      margin: 4px; } }
+
+#main .container, #category .container {
+  padding: 30px 0; }
+  #main .container .list1 .title h4, #main .container .list2 .title h4, #category .container .list1 .title h4, #category .container .list2 .title h4 {
+    font-size: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: #BF0000; }
+  #main .container .list1 .ebooks, #main .container .list2 .ebooks, #category .container .list1 .ebooks, #category .container .list2 .ebooks {
+    padding: 16px; }
+    #main .container .list1 .ebooks .book, #main .container .list2 .ebooks .book, #category .container .list1 .ebooks .book, #category .container .list2 .ebooks .book {
+      margin-bottom: 30px; }
+      #main .container .list1 .ebooks .book a, #main .container .list2 .ebooks .book a, #category .container .list1 .ebooks .book a, #category .container .list2 .ebooks .book a {
+        text-decoration: none;
+        color: black; }
+        #main .container .list1 .ebooks .book a .img, #main .container .list2 .ebooks .book a .img, #category .container .list1 .ebooks .book a .img, #category .container .list2 .ebooks .book a .img {
+          position: relative;
+          background-color: black; }
+          #main .container .list1 .ebooks .book a .img img, #main .container .list2 .ebooks .book a .img img, #category .container .list1 .ebooks .book a .img img, #category .container .list2 .ebooks .book a .img img {
+            width: 100%;
+            height: 238px;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease; }
+            #main .container .list1 .ebooks .book a .img img:hover, #main .container .list2 .ebooks .book a .img img:hover, #category .container .list1 .ebooks .book a .img img:hover, #category .container .list2 .ebooks .book a .img img:hover {
+              opacity: 0.8; }
+          #main .container .list1 .ebooks .book a .img .lang, #main .container .list2 .ebooks .book a .img .lang, #category .container .list1 .ebooks .book a .img .lang, #category .container .list2 .ebooks .book a .img .lang {
+            background-color: #BF0000;
+            border: 1px solid transparent;
+            font-size: 14px;
+            color: white;
+            line-height: 12px;
+            text-align: center;
+            font-weight: bold;
+            position: absolute;
+            width: 27px;
+            height: 17px;
+            opacity: 0.9;
+            top: 8px;
+            right: 8px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px; }
+        #main .container .list1 .ebooks .book a h4, #main .container .list2 .ebooks .book a h4, #category .container .list1 .ebooks .book a h4, #category .container .list2 .ebooks .book a h4 {
+          font-size: 15px;
+          margin: 5px 0; }
+        #main .container .list1 .ebooks .book a p, #main .container .list2 .ebooks .book a p, #category .container .list1 .ebooks .book a p, #category .container .list2 .ebooks .book a p {
+          font-size: 13px;
+          color: #676767; }
+        #main .container .list1 .ebooks .book a button, #main .container .list2 .ebooks .book a button, #category .container .list1 .ebooks .book a button, #category .container .list2 .ebooks .book a button {
+          font-size: 13px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          border: none;
+          padding: 7px 15px;
+          background-color: black;
+          color: white; }
+
+#slide_wrap .container .slider {
+  height: 340px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  height: 342px;
+  padding: 0 15px; }
+  #slide_wrap .container .slider .bookImg {
+    padding: 20px;
+    width: 240px; }
+    #slide_wrap .container .slider .bookImg img {
+      width: 100%;
+      height: 300px; }
+  #slide_wrap .container .slider .bookDetail {
+    font-weight: 300;
+    padding: 20px; }
+    #slide_wrap .container .slider .bookDetail h3 {
+      margin-top: 15px;
+      font-size: 23px;
+      padding: 12px 0px; }
+    #slide_wrap .container .slider .bookDetail h4 {
+      font-size: 17px;
+      color: #4d4d4d;
+      padding-bottom: 17px; }
+    #slide_wrap .container .slider .bookDetail p {
+      font-style: oblique; }
+  #slide_wrap .container .slider .bookButton {
+    padding: 20px;
+    height: 300px;
+    position: relative; }
+    #slide_wrap .container .slider .bookButton a {
+      display: inline-block;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border: none;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      padding: 7px 15px;
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+#slide_wrap .container .slideCount {
+  width: 74px;
+  padding: 15px 0;
+  margin: 0 auto;
+  margin-bottom: 30px; }
+  #slide_wrap .container .slideCount div {
+    cursor: pointer;
+    margin: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid black;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left; }
+@media screen and (min-width: 760px) and (max-width: 990px) {
+  #slide_wrap .container .slider {
+    height: 275px; }
+    #slide_wrap .container .slider .bookImg {
+      width: 180px; }
+    #slide_wrap .container .slider .bookDetail {
+      font-weight: 300;
+      padding: 0px; }
+      #slide_wrap .container .slider .bookDetail h3 {
+        font-size: 19px;
+        padding: 4px 0px; }
+      #slide_wrap .container .slider .bookDetail h4 {
+        font-size: 14px;
+        color: #4d4d4d;
+        padding-bottom: 17px; }
+      #slide_wrap .container .slider .bookDetail p {
+        font-style: oblique;
+        font-size: 14px; }
+    #slide_wrap .container .slider .bookButton {
+      width: 150px;
+      padding: 20px;
+      height: 240px;
+      position: relative; }
+      #slide_wrap .container .slider .bookButton a {
+        display: inline-block;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border: none;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        padding: 7px 15px;
+        position: absolute;
+        bottom: 0;
+        right: 0; } }
+@media screen and (max-width: 790px) {
+  #slide_wrap .container {
+    display: none; } }
+
+#footer .container-fluid {
+  background-color: #000000; }
+  #footer .container-fluid .container {
+    color: white;
+    padding: 45px 0; }
+    #footer .container-fluid .container .about {
+      padding-right: 70px; }
+      #footer .container-fluid .container .about h4 {
+        font-size: 19px;
+        padding-bottom: 10px; }
+      #footer .container-fluid .container .about p {
+        padding: 15px 0;
+        font-size: 15px;
+        line-height: 25px;
+        color: #c6c6c6; }
+      #footer .container-fluid .container .about h5 {
+        text-align: right;
+        font-size: 14px;
+        color: #939393; }
+    #footer .container-fluid .container .sosialNetwork h4, #footer .container-fluid .container .contact h4 {
+      margin-bottom: 30px; }
+    #footer .container-fluid .container .sosialNetwork ul li a, #footer .container-fluid .container .contact ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: white; }
+    #footer .container-fluid .container .sosialNetwork ul li i, #footer .container-fluid .container .contact ul li i {
+      width: 25px;
+      text-align: center;
+      padding-bottom: 10px; }
+    #footer .container-fluid .container h6 {
+      padding-top: 50px;
+      font-size: 12px;
+      text-align: center; }
+@media screen and (max-width: 790px) {
+  #footer .container-fluid .container .sosialNetwork, #footer .container-fluid .container .contact {
+    margin-top: 40px; } }
+
+#register .container-fluid {
+  background-color: #eaeaea; }
+  #register .container-fluid .container {
+    padding: 80px 0; }
+    #register .container-fluid .container .row {
+      background-color: #fff;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      border-radius: 8px; }
+      #register .container-fluid .container .row div {
+        padding: 35px; }
+      #register .container-fluid .container .row h4 {
+        font-size: 20px;
+        padding: 25px 0;
+        font-weight: bold; }
+      #register .container-fluid .container .row label {
+        font-size: 15px;
+        display: block;
+        color: #4d4d4d; }
+      #register .container-fluid .container .row input[type="text"], #register .container-fluid .container .row input[type="password"], #register .container-fluid .container .row input[type="email"] {
+        border: 1px solid gray;
+        background-color: #f7f7f7;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        padding: 6px 0;
+        text-indent: 8px;
+        color: #5f5f5f;
+        display: block;
+        width: 100%; }
+      #register .container-fluid .container .row input[type="submit"] {
+        border: 1px solid black;
+        height: 35px;
+        padding: 6px 15px;
+        font-size: 15px;
+        margin-bottom: 15px;
+        background-color: white;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease; }
+        #register .container-fluid .container .row input[type="submit"]:hover {
+          background-color: black;
+          color: white; }
+      #register .container-fluid .container .row input:focus {
+        border-color: #81b9cc;
+        background-color: white; }
+      #register .container-fluid .container .row .registerForm {
+        background-color: #c9e1e9;
+        padding: 0;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px; }
+        #register .container-fluid .container .row .registerForm h4 {
+          padding-left: 15px;
+          margin-top: -2px; }
+        #register .container-fluid .container .row .registerForm form div {
+          padding: 0 15px;
+          width: 50%;
+          float: left; }
+          #register .container-fluid .container .row .registerForm form div .email {
+            margin-top: 2px; }
+@media screen and (max-width: 480px) {
+  #register .container-fluid .container .row .registerForm form div {
+    width: 100%; } }
+
+#about .container-fluid .container {
+  padding: 35px; }
+  #about .container-fluid .container .row .book {
+    padding: 30px; }
+    #about .container-fluid .container .row .book img {
+      width: 100%;
+      height: 350px; }
+    #about .container-fluid .container .row .book h3 {
+      font-size: 20px;
+      padding: 10px 0; }
+    #about .container-fluid .container .row .book h4 {
+      font-size: 16px;
+      color: #5a5a5a; }
+  #about .container-fluid .container .row .text {
+    padding: 30px; }
+    #about .container-fluid .container .row .text h3 {
+      font-size: 16px;
+      margin: 5px 0; }
+      #about .container-fluid .container .row .text h3 span {
+        color: #BF0000; }
+    #about .container-fluid .container .row .text h4 {
+      font-size: 15px;
+      color: #5a5a5a;
+      font-style: oblique;
+      margin-bottom: 5px; }
+    #about .container-fluid .container .row .text h5 {
+      font-size: 19px;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-weight: bold; }
+    #about .container-fluid .container .row .text p {
+      font-size: 15px;
+      line-height: 25px;
+      word-wrap: break-word; }
+    #about .container-fluid .container .row .text ul {
+      padding: 15px 0; }
+      #about .container-fluid .container .row .text ul li {
+        float: left;
+        margin-right: 10px;
+        color: #404040; }
+        #about .container-fluid .container .row .text ul li:last-child {
+          padding: 14px 0; }
+  #about .container-fluid .container .row .downloadPDF {
+    padding: 45px 0; }
+    #about .container-fluid .container .row .downloadPDF a {
+      border: 1px solid black;
+      background-color: black;
+      display: inline-block;
+      padding: 7px 38px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease; }
+      #about .container-fluid .container .row .downloadPDF a:hover {
+        background-color: white;
+        color: black; }
+
+#allBooks .container-fluid .container {
+  padding: 50px 0; }
+  #allBooks .container-fluid .container .row .listBook {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0; }
+    #allBooks .container-fluid .container .row .listBook:last-child {
+      border: none; }
+    #allBooks .container-fluid .container .row .listBook .image {
+      border: 1px solid lightgray;
+      padding: 2px;
+      float: left; }
+      #allBooks .container-fluid .container .row .listBook .image img {
+        width: 120px; }
+    #allBooks .container-fluid .container .row .listBook .textBook {
+      float: right;
+      width: calc(100% - 126px);
+      padding: 0 15px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h3 {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 5px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h4 {
+        font-size: 16px;
+        color: #4d4d4d; }
+      #allBooks .container-fluid .container .row .listBook .textBook h5 {
+        padding: 10px 0; }
+        #allBooks .container-fluid .container .row .listBook .textBook h5 span {
+          color: #BF0000; }
+      #allBooks .container-fluid .container .row .listBook .textBook p {
+        font-style: oblique;
+        color: #4d4d4d; }
+      #allBooks .container-fluid .container .row .listBook .textBook a {
+        background: black;
+        color: white;
+        text-decoration: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        padding: 8px 12px;
+        float: right; }
+@media screen and (min-width: 990px) and (max-width: 1100px) {
+  #allBooks .container-fluid .container .row .listBook .textBook {
+    padding: 25px 13px; }
+    #allBooks .container-fluid .container .row .listBook .textBook h3 {
+      font-size: 16px;
+      padding-bottom: 4px; }
+    #allBooks .container-fluid .container .row .listBook .textBook h4 {
+      font-size: 14px;
+      color: #4d4d4d; }
+    #allBooks .container-fluid .container .row .listBook .textBook h5 {
+      font-size: 14px;
+      padding: 10px 0; }
+      #allBooks .container-fluid .container .row .listBook .textBook h5 span {
+        font-size: 14px; }
+    #allBooks .container-fluid .container .row .listBook .textBook p {
+      font-size: 14px; }
+    #allBooks .container-fluid .container .row .listBook .textBook a {
+      font-size: 14px; } }
+@media screen and (min-width: 480px) and (max-width: 990px) {
+  #allBooks .container-fluid .container .row .listBook {
+    padding: 25px 50px; }
+    #allBooks .container-fluid .container .row .listBook .image img {
+      width: 100px; }
+    #allBooks .container-fluid .container .row .listBook .textBook {
+      padding: 0px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h3 {
+        font-size: 16px;
+        padding-bottom: 4px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h4 {
+        font-size: 14px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h5 {
+        font-size: 14px;
+        padding: 10px 0; }
+        #allBooks .container-fluid .container .row .listBook .textBook h5 span {
+          font-size: 14px; }
+      #allBooks .container-fluid .container .row .listBook .textBook p {
+        font-size: 14px; }
+      #allBooks .container-fluid .container .row .listBook .textBook a {
+        font-size: 14px; } }
+@media screen and (max-width: 480px) {
+  #allBooks .container-fluid .container .row .listBook {
+    padding: 25px 20px; }
+    #allBooks .container-fluid .container .row .listBook .image {
+      margin: 0 auto;
+      float: none;
+      width: 185px; }
+      #allBooks .container-fluid .container .row .listBook .image img {
+        width: 100%; }
+    #allBooks .container-fluid .container .row .listBook .textBook {
+      width: 100%;
+      padding: 10px 0; }
+      #allBooks .container-fluid .container .row .listBook .textBook h3 {
+        font-size: 16px;
+        padding-bottom: 4px; }
+      #allBooks .container-fluid .container .row .listBook .textBook h4 {
+        font-size: 14px;
+        color: #4d4d4d; }
+      #allBooks .container-fluid .container .row .listBook .textBook h5 {
+        font-size: 14px;
+        padding: 10px 0; }
+        #allBooks .container-fluid .container .row .listBook .textBook h5 span {
+          font-size: 14px; }
+      #allBooks .container-fluid .container .row .listBook .textBook p {
+        font-size: 14px; }
+      #allBooks .container-fluid .container .row .listBook .textBook a {
+        margin-top: 5px;
+        font-size: 14px; } }
+
+#doneRegister .container .container_fluid {
+  padding: 120px 0; }
+  #doneRegister .container .container_fluid h6 {
+    font-size: 30px;
+    text-align: center; }
+
+#profil .container_fluid .container {
+  padding: 50px 0; }
+  #profil .container_fluid .container .bar {
+    padding: 25px 0; }
+    #profil .container_fluid .container .bar ul li {
+      padding: 15px 10px;
+      display: block;
+      cursor: pointer;
+      font-size: 16px; }
+      #profil .container_fluid .container .bar ul li:hover {
+        background-color: #f4f4f4;
+        border-right: 3px solid #BF0000;
+        z-index: 15;
+        color: #BF0000; }
+      #profil .container_fluid .container .bar ul li a {
+        color: black;
+        text-decoration: none; }
+  #profil .container_fluid .container .result {
+    padding: 25px 0;
+    background-color: #f7f7f7; }
+    #profil .container_fluid .container .result ul {
+      display: none;
+      width: 202px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 25px; }
+      #profil .container_fluid .container .result ul li {
+        padding: 13px 10px;
+        display: block;
+        cursor: pointer;
+        font-size: 16px;
+        border: 1px solid transparent; }
+        #profil .container_fluid .container .result ul li:hover {
+          border: 1px solid black;
+          z-index: 15;
+          color: #BF0000; }
+        #profil .container_fluid .container .result ul li a {
+          color: black;
+          text-decoration: none; }
+    #profil .container_fluid .container .result .usersEdit {
+      width: 202px;
+      margin: 0 auto; }
+      #profil .container_fluid .container .result .usersEdit label {
+        display: block;
+        font-size: 16px; }
+      #profil .container_fluid .container .result .usersEdit input {
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 5px 0;
+        border: 1px solid black;
+        text-indent: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: white; }
+      #profil .container_fluid .container .result .usersEdit input:focus[type="text"], #profil .container_fluid .container .result .usersEdit input:focus[type="password"] {
+        border: 1px solid #BF0000; }
+      #profil .container_fluid .container .result .usersEdit input[type="submit"] {
+        width: auto;
+        text-indent: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        float: right;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        #profil .container_fluid .container .result .usersEdit input[type="submit"]:hover {
+          background-color: black;
+          color: white; }
+    #profil .container_fluid .container .result .addBook {
+      display: none;
+      width: 502px;
+      margin: 0 auto; }
+      #profil .container_fluid .container .result .addBook label {
+        display: block;
+        font-size: 16px; }
+      #profil .container_fluid .container .result .addBook input {
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 5px 0;
+        border: 1px solid black;
+        text-indent: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-color: white; }
+      #profil .container_fluid .container .result .addBook input[type="file"] {
+        font-size: 13px; }
+      #profil .container_fluid .container .result .addBook textarea:focus, #profil .container_fluid .container .result .addBook input:focus[type="text"], #profil .container_fluid .container .result .addBook input:focus[type="password"] {
+        border: 1px solid #BF0000; }
+      #profil .container_fluid .container .result .addBook textarea {
+        width: 500px;
+        height: 200px;
+        border: 1px solid black;
+        background-color: white;
+        padding: 10px; }
+      #profil .container_fluid .container .result .addBook input[type="submit"] {
+        width: auto;
+        display: block;
+        text-indent: 0;
+        margin: 20px 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+        #profil .container_fluid .container .result .addBook input[type="submit"]:hover {
+          background-color: black;
+          color: white; }
+      #profil .container_fluid .container .result .addBook select {
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid black;
+        background-color: white;
+        padding: 3px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+      #profil .container_fluid .container .result .addBook .cent {
+        margin: 0 auto;
+        width: 202px; }
+@media screen and (min-width: 480px) and (max-width: 760px) {
+  #profil .container_fluid .container .result ul {
+    display: inherit; } }
+@media screen and (max-width: 550px) {
+  #profil .container_fluid .container .result ul {
+    display: inherit; }
+  #profil .container_fluid .container .result .addBook {
+    width: 202px; }
+    #profil .container_fluid .container .result .addBook textarea {
+      width: 200px;
+      height: 300px; } }
+
+/*# sourceMappingURL=style.css.map */

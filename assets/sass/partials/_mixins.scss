@@ -1,0 +1,64 @@
+$mainColor: #BF0000;;
+$textColor: white;
+
+body,html{
+	margin: 0;
+	padding: 0;
+
+	font: 14px 'Lato', Tahoma, Helvetica, Arial, sans-serif;
+	color: black;
+  font-size: 15px;
+	overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+}
+ul, ol, li{
+	list-style: none;
+	padding: 0;
+}
+.clearFix{
+	clear: both;
+}
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    src: url(../../fonts/Lato-Light.ttf) format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: Lato;
+    font-style: normal;
+    src: url(../../fonts/Lato-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+@mixin transition($x) {
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -o-transition: $x;
+    transition: $x;
+}
+@mixin transform($x) {
+  -webkit-transform: $x;
+  -moz-transform: $x;
+  -ms-transform: $x;
+  -o-transform: $x;
+  transform: $x; 
+}
+@mixin shadow($x) {
+  -moz-box-shadow: $x;
+  -webkit-box-shadow: $x;
+  box-shadow: $x;
+}
+@mixin border-radius($x) {
+  -webkit-border-radius: $x; 
+  -moz-border-radius: $x; 
+  border-radius: $x; 
+}
+@mixin animation($x) {
+  -webkit-animation: $x;
+  -moz-animation: $x;
+  -o-animation: $x;
+  animation: $x;
+}
