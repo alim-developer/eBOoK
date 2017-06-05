@@ -2,7 +2,9 @@
 	include 'header.php';
 	include 'admin/db.php';
 
-	$id = $_GET['id'];
+	$id = htmlspecialchars(trim($_GET['id']));
+	$sil = array("\"", "\\", "/", "*", "'", "=", "-", "#", ";", "<", ">", "+", "%");
+	$id = str_replace($sil, "", $id);
 	$sql = "SELECT * FROM books_data WHERE id='$id'";
 	$query = mysqli_query($connect, $sql);
 	$result = mysqli_fetch_assoc($query);
